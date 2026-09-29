@@ -1,37 +1,31 @@
-# Problem Statement
+# STATEMENT.md
 
-## Title
+## PROBLEM STATEMENT
+In educational environments, managing student academic records manually using paper registers or simple spreadsheets is inefficient, time-consuming, and prone to human error. Manual calculation of class statistics—such as individual letter grades or class averages—increases administrative workload and leads to inconsistency in evaluation. Furthermore, without validation checks, there is a constant risk of recording invalid marks, making it difficult to maintain accurate and reliable student performance data.
 
-Design and Implementation of an Automated Student Marks and Grade Management System
+## SCOPE OF PROJECT
+The scope of this project focuses on developing a lightweight, terminal-based Python application designed for basic academic record management.
 
----
+### In-Scope:
+*   **CLI Interface:** Interactive command-line interface driven by user menu options.
+*   **CRUD Operations:** Ability to Add, Update, Delete, and View student records.
+*   **Automated Grading:** Logic to automatically map numerical marks (out of 100) to letter grades (`A`, `B`, `C`, `D`, `F`).
+*   **Data Validation:** Score boundary enforcement ($0 \le \text{marks} \le 100$) to prevent invalid entries.
+*   **Class Analytics:** Aggregate statistical calculation to determine class-wide average marks and average grade.
 
-## 1. Context & Background
+### Out-of-Scope:
+*   Graphical User Interface (GUI) or web interface (focused purely on CLI).
+*   Persistent database storage (records reside in in-memory dictionary during runtime).
+*   Multi-subject or multi-semester grade tracking per student.
 
-In educational environments, managing student academic records manually using paper registers or simple spreadsheets is inefficient, time-consuming, and prone to human error. Manual calculation of class statistics—such as individual letter grades or class averages—increases administrative workload and leads to inconsistency in evaluation.
+## TARGET USERS
+*   **Teachers & Instructors:** Who need a quick, distraction-free tool to input marks and automatically calculate grades for a class.
+*   **Academic Tutors:** Looking to track individual student progress and overall batch averages.
+*   **Students & Python Beginners:** Studying CLI-based application design, data structures (dictionaries), and modular programming concepts.
 
----
-
-## 2. Problem Definition
-
-Currently, there is a lack of a lightweight, interactive system that can easily track student scores, convert numeric marks into standard letter grades, and perform fundamental administrative operations in a centralized location.
-
-The primary challenges include:
-
-* **Calculation Errors:** High probability of mistakes when manually calculating letter grades and class overall averages.
-* **Data Integrity Issues:** Risk of accepting out-of-range marks (e.g., negative numbers or scores above 100).
-* **Inefficient Data Access:** Difficulty in quickly looking up, updating, or deleting specific student records without sifting through complete lists.
-* **Lack of Feedback:** Inability to instantly view class-wide performance metrics to assess overall academic output.
-
----
-
-## 3. Objective
-
-To design, develop, and deploy a CLI-based menu-driven Python application that automates student record management.
-
-The system must satisfy the following functional requirements:
-
-1. **Record Maintenance:** Allow administrators to add, update, delete, and view individual or complete student performance records.
-2. **Grade Mapping:** Automatically convert raw scores (out of 100) into standardized letter grades (`A`, `B`, `C`, `D`, `F`).
-3. **Data Validation:** Enforce score boundary constraints ($0 \le \text{marks} \le 100$) before modifying data structures.
-4. **Performance Analytics:** Aggregate overall class data to evaluate class-wide averages and average grade performance dynamically.
+## HIGH LEVEL FEATURES
+*   **Interactive Menu System:** Loop-driven terminal menu allowing continuous operations until exit.
+*   **Automated Grade Assignment:** Instant conversion of numeric scores into standard letter grades based on predefined boundary criteria.
+*   **Data Guardrails:** Built-in checks to reject marks outside the standard 0–100 scale.
+*   **Individual & Group Record Lookup:** Options to view the entire class roster or query specific individual results.
+*   **Dynamic Class Performance Metric:** Real-time class average calculation updated dynamically as records are modified.
